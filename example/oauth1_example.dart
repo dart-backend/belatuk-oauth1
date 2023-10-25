@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:http/src/response.dart';
-import 'package:oauth1/oauth1.dart' as oauth1;
+import 'package:belatuk_oauth1/belatuk_oauth1.dart' as oauth1;
 
 void main() {
   // define platform (server)
@@ -51,6 +51,6 @@ void main() {
     });
 
     // NOTE: you can get optional values from AuthorizationResponse object
-    print('Your screen name is ' + res.optionalParameters['screen_name']!);
+    print('Your screen name is ${res.optionalParameters['screen_name']!}');
   });
 }

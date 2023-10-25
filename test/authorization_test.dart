@@ -1,7 +1,7 @@
 library authorization_test;
 
+import 'package:belatuk_oauth1/belatuk_oauth1.dart';
 import 'package:http/http.dart' as http;
-import 'package:oauth1/oauth1.dart';
 import 'package:test/test.dart';
 
 void main() {

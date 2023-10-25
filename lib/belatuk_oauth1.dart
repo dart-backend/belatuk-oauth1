@@ -1,4 +1,4 @@
-library oauth1;
+library belatuk_oauth1;
 
 export 'src/client_credentials.dart';
 export 'src/credentials.dart';

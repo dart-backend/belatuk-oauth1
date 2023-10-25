@@ -1,5 +1,5 @@
-OAuth1
-===========
+Belatuk OAuth1
+==============
 
 [![Build Status](https://travis-ci.org/nbspou/dart-oauth1.svg?branch=fork/nbspou)](https://travis-ci.org/nbspou/dart-oauth1)
 
@@ -12,7 +12,7 @@ Add to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  oauth1: ^1.0.6
+  oauth1: ^3.0.0
 ```
 
 Please use like below.
@@ -23,7 +23,7 @@ import 'package:oauth1/oauth1.dart' as oauth1;
 
 void main() {
   // define platform (server)
-  var platform = new oauth1.Platform(
+  var platform = oauth1.Platform(
       'https://api.twitter.com/oauth/request_token', // temporary credentials request
       'https://api.twitter.com/oauth/authorize',     // resource owner authorization
       'https://api.twitter.com/oauth/access_token',  // token credentials request
@@ -33,10 +33,10 @@ void main() {
   // define client credentials (consumer keys)
   const String apiKey = 'LLDeVY0ySvjoOVmJ2XgBItvTV';
   const String apiSecret = 'JmEpkWXXmY7BYoQor5AyR84BD2BiN47GIBUPXn3bopZqodJ0MV';
-  var clientCredentials = new oauth1.ClientCredentials(apiKey, apiSecret);
+  var clientCredentials = oauth1.ClientCredentials(apiKey, apiSecret);
 
   // create Authorization object with client credentials and platform definition
-  var auth = new oauth1.Authorization(clientCredentials, platform);
+  var auth = oauth1.Authorization(clientCredentials, platform);
 
   // request temporary credentials (request tokens)
   auth.requestTemporaryCredentials('oob').then((res) {
@@ -52,7 +52,7 @@ void main() {
   }).then((res) {
     // yeah, you got token credentials
     // create Client object
-    var client = new oauth1.Client(platform.signatureMethod, clientCredentials, res.credentials);
+    var client = oauth1.Client(platform.signatureMethod, clientCredentials, res.credentials);
 
     // now you can access to protected resources via client
     client.get('https://api.twitter.com/1.1/statuses/home_timeline.json?count=1').then((res) {
