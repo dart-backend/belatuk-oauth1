@@ -10,8 +10,8 @@ void main() {
       'https://api.twitter.com/oauth/authorize',
       'https://api.twitter.com/oauth/access_token',
       SignatureMethods.hmacSha1);
-  const String apiKey = 'LLDeVY0ySvjoOVmJ2XgBItvTV';
-  const String apiSecret = 'JmEpkWXXmY7BYoQor5AyR84BD2BiN47GIBUPXn3bopZqodJ0MV';
+  const String apiKey = '<Twitter API Key>';
+  const String apiSecret = '<Twitter API Secret>';
   final ClientCredentials clientCredentials =
       ClientCredentials(apiKey, apiSecret);
 

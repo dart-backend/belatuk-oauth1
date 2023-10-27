@@ -1,5 +1,5 @@
 name: belatuk_oauth1
-version: 3.0.0
+version: 3.0.1
 description: "\"RFC 5849: The OAuth 1.0 Protocol\" client implementation for Dart."
 homepage: https://github.com/nbspou/dart-oauth1
 

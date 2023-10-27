@@ -13,8 +13,8 @@ void main() {
       );
 
   // define client credentials (consumer keys)
-  const String apiKey = 'LLDeVY0ySvjoOVmJ2XgBItvTV';
-  const String apiSecret = 'JmEpkWXXmY7BYoQor5AyR84BD2BiN47GIBUPXn3bopZqodJ0MV';
+  const String apiKey = '<Twitter API Key>';
+  const String apiSecret = 'Twitter API Secret';
   final oauth1.ClientCredentials clientCredentials =
       oauth1.ClientCredentials(apiKey, apiSecret);
 
